@@ -1,6 +1,6 @@
-const text = await Deno.readTextFile("input.txt");
+import { getInput } from "../utils.ts";
 
-const calories = text.split("\n");
+const calories = await getInput();
 
 let highVal = 0;
 calories.reduce((prev, curr) => {
@@ -13,6 +13,6 @@ calories.reduce((prev, curr) => {
   return 0;
 }, 0);
 
-// discovered you could reduce into a sort and just grab the highest one for highVal
+// discovered you could reduce into a sort and just grab the highest one for highVal (i.e. calories.sort().slice(0))
 
 console.log(highVal);

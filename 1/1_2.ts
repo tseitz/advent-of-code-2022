@@ -1,6 +1,6 @@
-const text = await Deno.readTextFile("input.txt");
+import { getInput } from "../utils.ts";
 
-const calories = text.split("\n");
+const calories = await getInput();
 
 const highVals = new Array(3).fill(0);
 calories.reduce((prev, curr) => {

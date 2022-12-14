@@ -8,6 +8,7 @@ interface RPS {
   beats: number[];
 }
 
+// not proud of this
 const rock: RPS = {
   id_score: 1,
   elf: "A",
